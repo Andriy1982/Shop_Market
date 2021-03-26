@@ -11,4 +11,5 @@ export interface ICard {
 export interface IRootState {
   filter: string;
   cards: ICard[];
+  basket: ICard[];
 }

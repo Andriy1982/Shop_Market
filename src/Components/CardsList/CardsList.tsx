@@ -1,7 +1,11 @@
-import { useEffect, Fragment } from 'react';
+import { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import axios from 'axios';
 import { IRootState } from '../../interfaces';
+import { addCards } from '../../redux/action/cardsAction';
+import { ICard } from '../../interfaces/';
+import Card from '../Card/Card';
+import styles from './CardList.module.css';
 
 export default function Cardslist() {
   const cards = useSelector((state: IRootState) => state.cards);
@@ -10,20 +14,28 @@ export default function Cardslist() {
   useEffect(() => {
     axios
       .get('http://localhost:4040/cards')
-      .then((response): void | PromiseLike<void> => console.log(response));
-  }, []);
+      .then(({ data }) => dispatch(addCards(data)));
+  }, [dispatch]);
 
   return (
-    <Fragment>
+    <>
       {cards && (
-        <ul>
-          {cards.map(card => (
-            <li key={card.id}>
-              <span>{card.name}</span>
-            </li>
+        <ul className={styles.list}>
+          {cards.map(({ id, name, image, cost, size }) => (
+            <Card
+              key={id}
+              id={id}
+              name={name}
+              image={image}
+              cost={cost}
+              size={size}
+            />
+            // <li key={card.id}>
+            //   <span>{card.name}</span>
+            // </li>
           ))}
         </ul>
       )}
-    </Fragment>
+    </>
   );
 }

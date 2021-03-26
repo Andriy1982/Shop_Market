@@ -1,0 +1,41 @@
+.list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-rows: repeat(auto-fit, minmax(380px, 1fr));
+  column-gap: 16px;
+  row-gap: 20px;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  overflow: hidden;
+}
+
+.listItem {
+  padding: 20px;
+  background-color: #dcdcdc;
+}
+
+.title {
+  margin-top: 0;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.image {
+  width: 100%;
+}
+.wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 14px;
+}
+
+.size {
+  width: 20px;
+  border: solid 1px;
+  border-radius: 50%;
+  padding: 5px;
+  text-align: center;
+}

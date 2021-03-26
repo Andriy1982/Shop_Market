@@ -1,0 +1,56 @@
+.listItem {
+  padding: 20px;
+  background-color: #dcdcdc;
+}
+
+.title {
+  margin-top: 0;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.image {
+  width: 100%;
+}
+
+.wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 14px;
+}
+
+.size {
+  width: 20px;
+  border: solid 1px;
+  border-radius: 50%;
+  padding: 5px;
+  text-align: center;
+}
+
+.buttonWrap {
+  display: flex;
+  justify-content: space-around;
+}
+
+.buttonWrap button {
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 3px;
+  width: 28px;
+  height: 21px;
+  padding: 4px;
+}
+
+.btnBasket {
+  background-image: url(../../images/basket.png);
+}
+
+.btnSelected {
+  background-image: url(../../images/selected.png);
+}
+
+.btnComparison {
+  background-image: url(../../images/compare.png);
+}

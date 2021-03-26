@@ -6,7 +6,7 @@ const initialState: ICard[] = [];
 const cards = (state = initialState, action: IAddCards) => {
   switch (action.type) {
     case ADD_CARDS:
-      return [...state, ...action.payload];
+      return [...action.payload];
     default:
       return state;
   }
