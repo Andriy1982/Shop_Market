@@ -35,6 +35,42 @@
             "country": "argentina",
             "image": "http://i.piccy.info/i9/e2e5c6cb274121b9898b7d45a085130f/1566815049/29582/1334636/4.jpg",
             "size": "XL"
+        },
+        {
+            "id": 5,
+            "sex": "male",
+            "name": "Рубашка №5",
+            "cost": 4000,
+            "country": "argentina",
+            "image": "http://i.piccy.info/i9/9921ed03bf45751d45447b15e78be751/1566814909/19890/1334636/1.jpg",
+            "size": "M"
+        },
+        {
+            "id": 6,
+            "sex": "male",
+            "name": "Рубашка №6",
+            "cost": 1900,
+            "country": "argentina",
+            "image": "http://i.piccy.info/i9/acc4df9b14e48a42d7cd353e923673e7/1566814962/22015/1334636/2.jpg",
+            "size": "M"
+        },
+        {
+            "id": 7,
+            "sex": "male",
+            "name": "Рубашка №7",
+            "cost": 3500,
+            "country": "argentina",
+            "image": "http://i.piccy.info/i9/174610be67bfea39f99c956885ae3786/1566815027/25896/1334636/3.jpg",
+            "size": "S"
+        },
+        {
+            "id": 8,
+            "sex": "male",
+            "name": "Рубашка №8",
+            "cost": 2000,
+            "country": "argentina",
+            "image": "http://i.piccy.info/i9/e2e5c6cb274121b9898b7d45a085130f/1566815049/29582/1334636/4.jpg",
+            "size": "XL"
         }
     ]
 }

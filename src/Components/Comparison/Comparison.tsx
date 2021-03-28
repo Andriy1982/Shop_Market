@@ -1,9 +1,10 @@
 import { useSelector, useDispatch } from 'react-redux';
 import { IRootState } from '../../interfaces';
-import styles from './Basket.module.css';
+import styles from './Comparison.module.css';
 
-export default function Basket() {
-  const cards = useSelector((state: IRootState) => state.basket);
+export default function Comparison() {
+  const cards = useSelector((state: IRootState) => state.comparison);
+  console.log(cards);
 
   return (
     <>

@@ -1,0 +1,27 @@
+.sectionFilter {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.sectionFilter label,
+.filterSelect label,
+.filterCheckbox label {
+  margin-bottom: 10px;
+}
+
+.sectionFilter input {
+  margin-bottom: 10px;
+}
+
+.filterName,
+.filterSelect,
+.filterCheckbox {
+  display: flex;
+  flex-direction: column;
+}
+
+.filterSelect button,
+.filterSelect select {
+  margin-bottom: 10px;
+}

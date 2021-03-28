@@ -1,7 +1,9 @@
 import { useDispatch, useSelector } from 'react-redux';
 import styles from './Card.module.css';
 import { IRootState, ICard } from '../../interfaces';
-import { addCardsToBasket } from '../../redux/action/basketAktion';
+import { addCardsToBasket } from '../../redux/action/basketAction';
+import { addCardsToSelected } from '../../redux/action/selectedAction';
+import { addCardsToComparison } from '../../redux/action/comparisonAction';
 
 interface IProps {
   id: number;
@@ -15,9 +17,17 @@ export default function Card({ id, name, image, cost, size }: IProps) {
   const cards = useSelector((state: IRootState) => state.cards);
   const dispatch = useDispatch();
 
-  const addCard = (id: number) => {
+  const addCardToBasket = (id: number) => {
     const card = cards.find(card => card.id === id);
     if (card) dispatch(addCardsToBasket(card));
+  };
+  const addCardToSelect = (id: number) => {
+    const card = cards.find(card => card.id === id);
+    if (card) dispatch(addCardsToSelected(card));
+  };
+  const addCardToComparison = (id: number) => {
+    const card = cards.find(card => card.id === id);
+    if (card) dispatch(addCardsToComparison(card));
   };
   // console.log(id);
 
@@ -31,11 +41,17 @@ export default function Card({ id, name, image, cost, size }: IProps) {
       </div>
       <div className={styles.buttonWrap}>
         <button
-          onClick={() => addCard(id)}
+          onClick={() => addCardToBasket(id)}
           className={styles.btnBasket}
         ></button>
-        <button className={styles.btnSelected}></button>
-        <button className={styles.btnComparison}></button>
+        <button
+          onClick={() => addCardToSelect(id)}
+          className={styles.btnSelected}
+        ></button>
+        <button
+          onClick={() => addCardToComparison(id)}
+          className={styles.btnComparison}
+        ></button>
       </div>
     </li>
   );

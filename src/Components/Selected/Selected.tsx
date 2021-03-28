@@ -1,9 +1,9 @@
 import { useSelector, useDispatch } from 'react-redux';
 import { IRootState } from '../../interfaces';
-import styles from './Basket.module.css';
+import styles from './Selected.module.css';
 
-export default function Basket() {
-  const cards = useSelector((state: IRootState) => state.basket);
+export default function Selected() {
+  const cards = useSelector((state: IRootState) => state.selected);
 
   return (
     <>

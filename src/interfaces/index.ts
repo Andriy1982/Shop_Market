@@ -9,7 +9,13 @@ export interface ICard {
 }
 
 export interface IRootState {
-  filter: string;
+  filter: {
+    filterChange: string;
+    filterSelect: string;
+    filterCheckbox: string[];
+  };
   cards: ICard[];
   basket: ICard[];
+  selected: ICard[];
+  comparison: ICard[];
 }

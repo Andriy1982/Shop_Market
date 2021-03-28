@@ -6,7 +6,11 @@ import { IRootState, ICard } from '../../interfaces';
 
 const Navigation = () => {
   const cardsBasket = useSelector((state: IRootState) => state.basket);
-  const quantity = cardsBasket.length;
+  const cardsSelected = useSelector((state: IRootState) => state.selected);
+  const cardsComparison = useSelector((state: IRootState) => state.comparison);
+  const quantityBasket = cardsBasket.length;
+  const quantitySelected = cardsSelected.length;
+  const quantityComparison = cardsComparison.length;
   // const isloggedIn = useSelector(authSelectors.getIsLoggedIn);
   return (
     <nav className={style.nav}>
@@ -26,7 +30,7 @@ const Navigation = () => {
           className={style.link}
           activeClassName={style.activeLink}
         >
-          Корзина <span>{quantity}</span>
+          Корзина <span>{quantityBasket}</span>
         </NavLink>
         <NavLink
           to="/selected"
@@ -34,7 +38,7 @@ const Navigation = () => {
           className={style.link}
           activeClassName={style.activeLink}
         >
-          Обрані <span>{quantity}</span>
+          Обрані <span>{quantitySelected}</span>
         </NavLink>
         <NavLink
           to="/comparison"
@@ -42,7 +46,7 @@ const Navigation = () => {
           className={style.link}
           activeClassName={style.activeLink}
         >
-          Порівняти <span>{quantity}</span>
+          Порівняти <span>{quantityComparison}</span>
         </NavLink>
       </div>
     </nav>
