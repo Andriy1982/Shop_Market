@@ -11,9 +11,9 @@ export default function App() {
   return (
     <Container>
       <AppBar />
-      <Filter />
       <Switch>
         <Route exact path="/">
+          <Filter />
           <CardList />
         </Route>
         <Route exact path="/basket">
@@ -24,6 +24,10 @@ export default function App() {
         </Route>
         <Route path="/comparison">
           <Comparison />
+        </Route>
+        <Route path="/">
+          <Filter />
+          <CardList />
         </Route>
       </Switch>
     </Container>

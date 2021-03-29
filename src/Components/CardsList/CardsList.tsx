@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import axios from 'axios';
 import { IRootState } from '../../interfaces';
@@ -9,7 +9,6 @@ import styles from './CardList.module.css';
 
 export default function CardsList() {
   const cards = useSelector((state: IRootState) => state.cards);
-  const [filterCards, setFilterCards] = useState(cards);
   const filterChange = useSelector(
     (state: IRootState) => state.filter.filterChange,
   );
@@ -77,7 +76,6 @@ export default function CardsList() {
     return cards;
   };
   const allCards = visibleCards();
-  // console.log(filterCards);
 
   return (
     <>
@@ -92,9 +90,6 @@ export default function CardsList() {
               cost={cost}
               size={size}
             />
-            // <li key={card.id}>
-            //   <span>{card.name}</span>
-            // </li>
           ))}
         </ul>
       )}

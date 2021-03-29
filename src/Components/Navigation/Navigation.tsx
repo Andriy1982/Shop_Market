@@ -1,8 +1,7 @@
 import { NavLink } from 'react-router-dom';
 import style from './Navigation.module.css';
 import { useSelector } from 'react-redux';
-import { IRootState, ICard } from '../../interfaces';
-// import { authSelectors } from '../../redux/auth';
+import { IRootState } from '../../interfaces';
 
 const Navigation = () => {
   const cardsBasket = useSelector((state: IRootState) => state.basket);
@@ -11,7 +10,6 @@ const Navigation = () => {
   const quantityBasket = cardsBasket.length;
   const quantitySelected = cardsSelected.length;
   const quantityComparison = cardsComparison.length;
-  // const isloggedIn = useSelector(authSelectors.getIsLoggedIn);
   return (
     <nav className={style.nav}>
       <NavLink

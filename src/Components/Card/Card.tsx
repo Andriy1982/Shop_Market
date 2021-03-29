@@ -1,6 +1,6 @@
 import { useDispatch, useSelector } from 'react-redux';
 import styles from './Card.module.css';
-import { IRootState, ICard } from '../../interfaces';
+import { IRootState } from '../../interfaces';
 import { addCardsToBasket } from '../../redux/action/basketAction';
 import { addCardsToSelected } from '../../redux/action/selectedAction';
 import { addCardsToComparison } from '../../redux/action/comparisonAction';
@@ -29,7 +29,6 @@ export default function Card({ id, name, image, cost, size }: IProps) {
     const card = cards.find(card => card.id === id);
     if (card) dispatch(addCardsToComparison(card));
   };
-  // console.log(id);
 
   return (
     <li className={styles.listItem}>

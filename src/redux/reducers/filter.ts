@@ -35,7 +35,7 @@ const filterCheckbox = (
 ) => {
   switch (action.type) {
     case FILTER_CHECKBOX:
-      return [...state, ...action.payload];
+      return [...action.payload];
     default:
       return state;
   }

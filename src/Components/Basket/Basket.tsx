@@ -1,4 +1,4 @@
-import { useSelector, useDispatch } from 'react-redux';
+import { useSelector } from 'react-redux';
 import { IRootState } from '../../interfaces';
 import styles from './Basket.module.css';
 
